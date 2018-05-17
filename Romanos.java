@@ -11,7 +11,6 @@ public class Romanos {
 
   public static String numRomUser = new String();
   public static char[] arrayRomUser = {};
-  // Fila: Character - Column: Veces repetido
   public static char[] arrayAgrupadosLetras = new char[20];
   public static int[] arrayAgrupadosRepetidos = new int[20];
   public static String[] valueRomByArray = {};
@@ -87,6 +86,8 @@ public class Romanos {
     }
 
     listarElementos();
+
+    sustituirValor(arrayAgrupadosLetras, arrayAgrupadosRepetidos);
   }
 
   public static void errorLetras () {
@@ -116,10 +117,15 @@ public class Romanos {
     }
   }
 
-
-  public static byte sustituirValor (String v) {
-    
-    return 1;
+  public static void sustituirValor (char[] letras, int[] repetidos) {
+    System.out.println("----------Valores----------");
+    for (char letra : letras) {
+      if( letra != arrayAgrupadosLetras[19]) {
+        // System.out.println("FOR FOR FOR FOR");
+        System.out.println( "Valor de " + letra + ": " +  valoresRomanos[letrasRomanos.indexOf(letra)] );
+      }
+    }
+    System.out.println("----------/Valores----------");
   }
 
   public static void asignar (char letra, int nRepetidos) {
