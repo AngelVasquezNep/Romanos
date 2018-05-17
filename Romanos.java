@@ -133,9 +133,24 @@ public class Romanos {
       return valorA + valorB;
     } else {
       if ( valorA == valoresRomanos[0] || valorA == valoresRomanos[2] || valorA == valoresRomanos[4]) {
+        
+        int indexA = 0;
+        int indexB = 0;
+
+        for ( int i = 0; i < valoresRomanos.length; i++ ) {
+          if ( valoresRomanos[i] == valorA ) { indexA = i; }
+          if ( valoresRomanos[i] == valorB ) { indexB = i; }
+        }
+
+        if ( (indexB - indexA) > 2 ) {
+          System.out.println("El valor " + valorA + " no puede precidir a " + valorB );
+          System.exit(1);
+        }
+
         return valorB - valorA;
+
       } else {
-        System.out.println("Error: el valor " + valorB + " es diferente de los valores: " + valoresRomanos[0] + ", " + valoresRomanos[2] + ", " + valoresRomanos[4]);
+        System.out.println("Error: el valor " + valorA + " es diferente de los valores: " + valoresRomanos[0] + ", " + valoresRomanos[2] + ", " + valoresRomanos[4]);
         System.exit(1);
         return 0;
       }
