@@ -26,3 +26,6 @@ Si tenemos un número comúesto, el valor de la izquierda no puede estar a más 
 
 ## Capuras
 
+![General](https://raw.githubusercontent.com/AngelVasquezNep/MorseCode/master/capturas/morseCode-1.png)
+
+![General](https://raw.githubusercontent.com/AngelVasquezNep/MorseCode/master/capturas/morseCode-manejo-errores.png)
