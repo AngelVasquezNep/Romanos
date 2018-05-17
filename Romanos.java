@@ -87,38 +87,47 @@ public class Romanos {
     System.out.println(":::::::::::::::::::::: </Resultados> ::::::::::::::::::");
     System.out.println();
     
-    sumar();
+    
+    // Esto retornara el valor: 
+    // sumar(resultSustitucionValores);
+    
+
+    System.out.println("Resultado Suma: " + evaluar() );
     
   }
-  
-  
-  public static void sumar () {
-    switch ( auxContador % 2) {
-      case 0:
-      sumarPar();
-      break;
-      default:
-      sumarInPar();
-      break;
+
+
+  public static int evaluar () {
+    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
+    if (auxContador == 2) { return suma( resultSustitucionValores[0], resultSustitucionValores[1] ); } 
+    if (auxContador == 3) { return suma( resultSustitucionValores[0], resultSustitucionValores[1], resultSustitucionValores[2] ); } 
+    
+    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
+    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
+    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
+    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
+    
+    else {
+      return 0;
     }
   }
-  
-  public static void sumarPar () {
-    System.out.println();
-    System.out.println( "Par: " );
-    System.out.println();
-  }
-  
-  public static void sumarInPar () {
-    System.out.println();
-    System.out.println( "Inpar: " );
-    System.out.println();
+
+
+  public static int suma(int valor) {
+    return valor;
   }
 
+  public static int suma(int valorA, int valorB) {
+    if (valorA > valorB) {
+      return valorA + valorB;
+    } else {
+      return valorB - valorA;
+    }
+  }
 
-
-
-
+  public static int suma(int valorA, int valorB, int valorC) {
+    return valorA;
+  }
 
 
   public static void errorLetras () {
