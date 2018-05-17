@@ -1,4 +1,3 @@
-import java.awt.image.RescaleOp;
 import java.util.Scanner;
 
 public class Romanos {
