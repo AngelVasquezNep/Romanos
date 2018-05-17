@@ -85,9 +85,9 @@ public class Romanos {
       // ToDo Verificar que sólo se ingresen letras validas
     }
 
-    listarElementos();
+    // listarElementos();
+    sustituirValor();
 
-    sustituirValor(arrayAgrupadosLetras, arrayAgrupadosRepetidos);
   }
 
   public static void errorLetras () {
@@ -109,23 +109,30 @@ public class Romanos {
 
 
   public static void listarElementos () {
+    System.out.println( "::::::::::::::::::::: <Los elementos> :::::::::::::::::::::" );
     for(int i = 0; i < auxContador; i++){
-      System.out.println("::::::::::::::::::::: ");
-      System.out.println("Los elementos: ");
       System.out.println("Letra: " + arrayAgrupadosLetras[i]);
       System.out.println("Valor: " + arrayAgrupadosRepetidos[i]);
     }
+    System.out.println( "Cantidad de elementos: " + auxContador );
+    System.out.println( "::::::::::::::::::::: </Los elementos> ::::::::::::::::::::");
   }
 
-  public static void sustituirValor (char[] letras, int[] repetidos) {
-    System.out.println("----------Valores----------");
-    for (char letra : letras) {
-      if( letra != arrayAgrupadosLetras[19]) {
-        // System.out.println("FOR FOR FOR FOR");
-        System.out.println( "Valor de " + letra + ": " +  valoresRomanos[letrasRomanos.indexOf(letra)] );
-      }
+
+  public static void sustituirValor () {
+    System.out.println( "::::::::::::::::::::: <Sustituidos> :::::::::::::::::::::" );
+    for(int i = 0; i < auxContador; i++){
+      System.out.println("Letra: " + arrayAgrupadosLetras[i]);
+      System.out.println("Valor: " + valoresRomanos[letrasRomanos.indexOf(arrayAgrupadosLetras[i])] * arrayAgrupadosRepetidos[i] ) ;
     }
-    System.out.println("----------/Valores----------");
+    System.out.println("----------------------------------------------------------");
+    System.out.println( "Cantidad de elementos: " + auxContador );
+    System.out.println( "::::::::::::::::::::: </Sustituidos> ::::::::::::::::::::");
+    System.out.println("");
+  }
+
+  public static int sustituirValor (char letra, int repetidos) {
+    return valoresRomanos[letrasRomanos.indexOf(letra)] * repetidos;
   }
 
   public static void asignar (char letra, int nRepetidos) {
