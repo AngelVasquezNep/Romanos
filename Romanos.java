@@ -47,7 +47,7 @@ public class Romanos {
           }
 
           if( (i + 2) < arrayRomUser.length && arrayRomUser[i + 1] == arrayRomUser [i + 2] ) {
-            // System.out.println("Tres letras iguales: " + arrayRomUser[i]);
+
             asignarToArray(arrayRomUser[i], 3);
 
             if( (i + 3) < arrayRomUser.length && arrayRomUser[i + 2] == arrayRomUser [i + 3] ) {
@@ -55,18 +55,14 @@ public class Romanos {
               System.exit(1);
             }
             
-            // Para evitar que itere sobre las otras dos letras.
-            // i = (byte) (i + 1);
             i = (byte) (i + 2);
             
           } else {
             asignarToArray(arrayRomUser[i], 2);
             i = (byte) (i + 1);
-            // System.out.println("Dos letras iguales: " + arrayRomUser[i]);
           }
           
         } else {
-          // System.out.println(Asignar 1 sólo elemento ----- ");
           asignarToArray(arrayRomUser[i], 1);
         }
         
@@ -75,8 +71,6 @@ public class Romanos {
     } else {
       System.out.println("Sólo una letra");
       asignarToArray(arrayRomUser[0], 1);
-      // Colocar valor de la letra que se haya ingresado
-      // ToDo Verificar que sólo se ingresen letras validas
     }
 
     sustituirValor();
@@ -188,19 +182,10 @@ public class Romanos {
   }
 
   public static void asignarToArray (char letra, int nRepetidos) {
-    // System.out.println("Letra: " + letra + " Repetidos: " + nRepetidos);
-    // System.out.println("--");
     arrayAgrupadosLetras[auxContador] = letra;
     arrayAgrupadosRepetidos[auxContador] = nRepetidos;
-    // System.out.println("--");
-    // System.out.println("Letra: " + arrayAgrupadosLetras[auxContador] );
-    // System.out.println("Repetidos: " + arrayAgrupadosRepetidos[auxContador] );
     auxContador++;
-    // System.out.println("auxContador: " + auxContador );
   }
-
-
-
 
 }
 
