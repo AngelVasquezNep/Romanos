@@ -21,9 +21,12 @@ public class Romanos {
 
 
   public static void main (String[] args) {
+    System.out.println();
     System.out.println("Bienvenido");
+    System.out.println();
     System.out.print("Por favor ingrese un número romano: ");
     numRomUser = entrada.nextLine();
+    System.out.println();
     repeat();
   }
 
@@ -76,24 +79,14 @@ public class Romanos {
       // ToDo Verificar que sólo se ingresen letras validas
     }
 
-
     sustituirValor();
 
     System.out.println();
-    System.out.println(":::::::::::::::::::::: <Resultados> :::::::::::::::::::");
-    for (int i = 0; i < resultSustitucionValores.length; i++) {
-      System.out.println("Resultado " + (i + 1) + ": " + resultSustitucionValores[i] );
-    }
-    System.out.println(":::::::::::::::::::::: </Resultados> ::::::::::::::::::");
+    System.out.println( "::::::::::::::::::::: <Resultados> ::::::::::::::::::::::::::::" );
+    System.out.println( "Resultado de la Suma: " + evaluar() );
+    System.out.println( "::::::::::::::::::::: </Resultados> :::::::::::::::::::::::::::" );
     System.out.println();
-    
-    
-    // Esto retornara el valor: 
-    // sumar(resultSustitucionValores);
-    
 
-    System.out.println("Resultado Suma: " + evaluar() );
-    
   }
 
 
@@ -150,7 +143,9 @@ public class Romanos {
         return valorB - valorA;
 
       } else {
-        System.out.println("Error: el valor " + valorA + " es diferente de los valores: " + valoresRomanos[0] + ", " + valoresRomanos[2] + ", " + valoresRomanos[4]);
+        System.out.println();
+        System.out.println("Error: el valor " + valorA + " es diferente de los valores: " + valoresRomanos[0] + ", " + valoresRomanos[2] + " o " + valoresRomanos[4] + ", por tanto no puede precidir a otro valor.");
+        System.out.println();
         System.exit(1);
         return 0;
       }
@@ -181,17 +176,15 @@ public class Romanos {
 
   public static void sustituirValor () {
     System.out.println();
-    System.out.println( "::::::::::::::::::::: <Sustituidos> :::::::::::::::::::::" );
+    System.out.println( "::::::::::::::::::::: <Valores por letra> :::::::::::::::::::::" );
     resultSustitucionValores = new int[auxContador];
     for(int i = 0; i < auxContador; i++){
-      System.out.println("Letra: " + arrayAgrupadosLetras[i]);
+      System.out.print("Letra: " + arrayAgrupadosLetras[i] + " | ");
       System.out.println("Valor: " + valoresRomanos[letrasRomanos.indexOf(arrayAgrupadosLetras[i])] * arrayAgrupadosRepetidos[i] ) ;
       resultSustitucionValores[i] = valoresRomanos[letrasRomanos.indexOf(arrayAgrupadosLetras[i])] * arrayAgrupadosRepetidos[i];
     }
-    System.out.println("----------------------------------------------------------");
-    System.out.println( "Cantidad de elementos: " + auxContador );
-    System.out.println( "::::::::::::::::::::: </Sustituidos> ::::::::::::::::::::");
-    System.out.println("");
+    System.out.println( "::::::::::::::::::::: </Valores por letra> ::::::::::::::::::::");
+    System.out.println( "" );
   }
 
   public static void asignarToArray (char letra, int nRepetidos) {
