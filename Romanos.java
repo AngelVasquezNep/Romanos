@@ -98,14 +98,25 @@ public class Romanos {
 
 
   public static int evaluar () {
-    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
-    if (auxContador == 2) { return suma( resultSustitucionValores[0], resultSustitucionValores[1] ); } 
-    if (auxContador == 3) { return suma( resultSustitucionValores[0], resultSustitucionValores[1], resultSustitucionValores[2] ); } 
+
+    // Sé que se ve horrible - Sigo pensando como mejorarlo - Lo siento :(
+
+    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); }
+    if (auxContador == 2) { return suma( resultSustitucionValores[0], resultSustitucionValores[1] ); }
+    if (auxContador == 3) { return suma( resultSustitucionValores[0], resultSustitucionValores[1], resultSustitucionValores[2] ); }
     
-    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
-    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
-    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
-    if (auxContador == 1) { return suma( resultSustitucionValores[0] ); } 
+    if (auxContador == 4) {
+      return suma( resultSustitucionValores[0], resultSustitucionValores[1] ) + suma( resultSustitucionValores[2], resultSustitucionValores[3] ) ; 
+    }
+    if (auxContador == 5) {
+      return suma( resultSustitucionValores[0], resultSustitucionValores[1] ) + suma( resultSustitucionValores[2], resultSustitucionValores[3], resultSustitucionValores[4] );
+    }
+    if (auxContador == 6) {
+      return suma( resultSustitucionValores[0], resultSustitucionValores[1] ) + suma( resultSustitucionValores[2], resultSustitucionValores[3] ) + suma( resultSustitucionValores[4], resultSustitucionValores[5] ) ; 
+    }
+    if (auxContador == 7) {
+      return suma( resultSustitucionValores[0], resultSustitucionValores[1] ) + suma( resultSustitucionValores[2], resultSustitucionValores[3] ) + suma( resultSustitucionValores[4], resultSustitucionValores[5], resultSustitucionValores[6] );
+    }
     
     else {
       return 0;
@@ -121,12 +132,18 @@ public class Romanos {
     if (valorA > valorB) {
       return valorA + valorB;
     } else {
-      return valorB - valorA;
+      if ( valorA == valoresRomanos[0] || valorA == valoresRomanos[2] || valorA == valoresRomanos[4]) {
+        return valorB - valorA;
+      } else {
+        System.out.println("Error: el valor " + valorB + " es diferente de los valores: " + valoresRomanos[0] + ", " + valoresRomanos[2] + ", " + valoresRomanos[4]);
+        System.exit(1);
+        return 0;
+      }
     }
   }
 
   public static int suma(int valorA, int valorB, int valorC) {
-    return valorA;
+    return suma( valorA, suma(valorB, valorC) );
   }
 
 
