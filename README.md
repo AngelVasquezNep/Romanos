@@ -26,6 +26,19 @@ Si tenemos un número comúesto, el valor de la izquierda no puede estar a más 
 
 ## Capuras
 
-![General](https://raw.githubusercontent.com/AngelVasquezNep/MorseCode/master/capturas/morseCode-1.png)
+![General](https://raw.githubusercontent.com/AngelVasquezNep/Romanos/master/capturas/romanos-1.png)
 
-![General](https://raw.githubusercontent.com/AngelVasquezNep/MorseCode/master/capturas/morseCode-manejo-errores.png)
+![General](https://raw.githubusercontent.com/AngelVasquezNep/Romanos/master/capturas/romanos-2.png)
+
+![General](https://raw.githubusercontent.com/AngelVasquezNep/Romanos/master/capturas/romanos-3.png)
+
+
+
+## Manejo de errores
+
+![General](https://raw.githubusercontent.com/AngelVasquezNep/Romanos/master/capturas/romanos-error-1.png)
+
+![General](https://raw.githubusercontent.com/AngelVasquezNep/Romanos/master/capturas/romanos-error-2.png)
+
+![General](https://raw.githubusercontent.com/AngelVasquezNep/Romanos/master/capturas/romanos-error-3.png)
+
