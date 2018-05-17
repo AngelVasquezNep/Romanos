@@ -17,6 +17,9 @@ public class Romanos {
   public static String[] valueRomByArray = {};
   public static int auxContador = 0;
 
+  public static int resultadoSuma = 0;
+
+
   public static void main (String[] args) {
     System.out.println("Bienvenido");
     System.out.print("Por favor ingrese un número romano: ");
@@ -38,8 +41,6 @@ public class Romanos {
     arrayRomUser = numRomUser.toCharArray();
 
     errorLetras();
-
-    System.out.println("Repeat Initi ---------");
 
     if (arrayRomUser.length > 1) {
       
@@ -72,15 +73,7 @@ public class Romanos {
           }
           
         } else {
-          // if( (i + 2) < arrayRomUser.length) {
-          //   System.out.println("I + 2? -----");
-          //   // asignar(arrayRomUser[ i + 1 ], 1);
-          // }
-          // else {
-          //   System.out.println("Asignar 1 sólo elemento ----- ");
-          //   asignar(arrayRomUser[i], 1);
-          // }
-          System.out.println("Asignar 1 sólo elemento ----- ");
+          // System.out.println("Asignar 1 sólo elemento ----- ");
           asignar(arrayRomUser[i], 1);
         }
         
@@ -122,12 +115,10 @@ public class Romanos {
       System.out.println("Valor: " + arrayAgrupadosRepetidos[i]);
     }
   }
+
+
   public static byte sustituirValor (String v) {
     
-    return 1;
-  }
-
-  public static int sumarIguales () {
     return 1;
   }
 
@@ -137,11 +128,14 @@ public class Romanos {
     arrayAgrupadosLetras[auxContador] = letra;
     arrayAgrupadosRepetidos[auxContador] = nRepetidos;
     // System.out.println("--");
-    System.out.println("Letra: " + arrayAgrupadosLetras[auxContador] );
-    System.out.println("Repetidos: " + arrayAgrupadosRepetidos[auxContador] );
+    // System.out.println("Letra: " + arrayAgrupadosLetras[auxContador] );
+    // System.out.println("Repetidos: " + arrayAgrupadosRepetidos[auxContador] );
     auxContador++;
     // System.out.println("auxContador: " + auxContador );
   }
+
+
+
 
 }
 
